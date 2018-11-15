@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qml-O4-n1x">
+                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CHf-kv-OG4" customClass="CustomCell" customModule="SampleTask" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CHf-kv-OG4" id="L3u-fE-fSI">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2k-3y-3HU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" placeholder="NY TIME MOST POPULAR" translatesAutoresizingMaskIntoConstraints="NO" id="33G-cv-bUc">
+                                        <rect key="frame" x="54" y="12" width="267" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="zHe-cQ-BJt"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsp-XU-Dqf">
+                                        <rect key="frame" x="12" y="25" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="HCI-jy-Hlm"/>
+                                            <constraint firstAttribute="height" constant="30" id="sPB-We-8xf"/>
+                                        </constraints>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27779346704483032" green="0.8937605619430542" blue="0.76288634538650513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="tsp-XU-Dqf" firstAttribute="top" secondItem="O2k-3y-3HU" secondAttribute="top" constant="25" id="HTb-T0-RGq"/>
+                                    <constraint firstItem="33G-cv-bUc" firstAttribute="top" secondItem="O2k-3y-3HU" secondAttribute="top" constant="12" id="TBs-Cc-2PK"/>
+                                    <constraint firstAttribute="height" constant="80" id="UgY-gX-dYj"/>
+                                    <constraint firstItem="33G-cv-bUc" firstAttribute="leading" secondItem="tsp-XU-Dqf" secondAttribute="trailing" constant="12" id="gvV-i4-EfA"/>
+                                    <constraint firstItem="tsp-XU-Dqf" firstAttribute="leading" secondItem="O2k-3y-3HU" secondAttribute="leading" constant="12" id="jTo-er-gx2"/>
+                                    <constraint firstAttribute="trailing" secondItem="33G-cv-bUc" secondAttribute="trailing" constant="54" id="x0N-cn-M74"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qml-O4-n1x" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3Fy-jZ-cUi"/>
+                            <constraint firstItem="O2k-3y-3HU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ABH-QX-YIG"/>
+                            <constraint firstItem="O2k-3y-3HU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Afy-wm-bBt"/>
+                            <constraint firstItem="qml-O4-n1x" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CnU-9d-bBa"/>
+                            <constraint firstItem="O2k-3y-3HU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gjc-xc-PX9"/>
+                            <constraint firstItem="qml-O4-n1x" firstAttribute="top" secondItem="O2k-3y-3HU" secondAttribute="bottom" constant="15" id="ymk-A5-2Az"/>
+                            <constraint firstItem="qml-O4-n1x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zWQ-rV-ICt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="33G-cv-bUc" id="mWH-Ho-xd8"/>
+                        <outlet property="tableView" destination="qml-O4-n1x" id="oRz-xi-JH9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
